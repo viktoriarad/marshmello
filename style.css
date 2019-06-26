@@ -389,6 +389,61 @@ div.wrapper {
   }
 }
 
+/* section 3 kinds of mallow */
+
+.kinds-of-mallow {
+  background-color: #f05d76;
+  padding: 150px 0 80px 0;
+}
+
+.kinds-of-mallow div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.kinds-of-mallow div img {
+  width: 20%;
+}
+
+/* button */
+
+.btn1 {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ffcfd0;
+  color: #ffcfd0;
+  background-color: #f05d76;
+  font-size: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+  padding: 10px 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.btn1::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #522d1d;
+  transition: .5s;
+  z-index: -1;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
 
 
 
