@@ -186,8 +186,7 @@ h1 {
 }
 
 .header h1,
-h2 {
-
+.header h2 {
   font-size: 38px;
   font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
@@ -297,6 +296,102 @@ h2 {
     top: 40%;
   }
 }
+
+/*  section 2 info */
+
+.section-info {
+  position: relative;
+  background-color: #ffcfd0;
+  background-image: url(img/world_strawberr.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+/* section wrapper */
+
+div.wrapper {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #522d1d;
+}
+
+.straw-banner {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  padding: 70px 0 30px 0;
+}
+
+.wrapper h2 {
+  font-size: 35px;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  line-height: 55px;
+}
+
+.wrapper p {
+  padding-top: 20px;
+}
+
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 0 400px 0;
+}
+
+.label img {
+  width: 20%;
+}
+
+/* strawberry cream packag */
+
+.straw-cream {
+  height: 50%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* animation ballon */
+
+.balloon-rose {
+  position: absolute;
+  top: -5%;
+  left: 4%;
+  height: 40%;
+  animation: balloon-rose 5s linear infinite;
+}
+
+
+@keyframes balloon-rose {
+  25% {
+    top: -8%;
+  }
+
+  50% {
+    top: -5%;
+  }
+
+  75% {
+    top: -2%;
+  }
+
+  100% {
+    top: -5%;
+  }
+}
+
+
+
+
 
 
 /* font-family: 'Archivo Black', sans-serif;
