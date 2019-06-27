@@ -311,7 +311,7 @@ h1 {
 /* section wrapper */
 
 div.wrapper {
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   letter-spacing: 2px;
@@ -321,7 +321,8 @@ div.wrapper {
   color: #522d1d;
 }
 
-.straw-banner {
+.straw-banner,
+.crispy-banner {
   width: 90%;
   display: block;
   margin: 0 auto;
@@ -340,29 +341,33 @@ div.wrapper {
 }
 
 .label {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0 auto;
   padding: 50px 0 400px 0;
+
 }
 
 .label img {
   width: 20%;
+  padding: 0 20px;
 }
 
 /* strawberry cream packag */
 
-.straw-cream {
-  height: 50%;
+.straw-cream,
+.cinn-crispy {
+  height: 45%;
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 /* animation ballon */
 
-.balloon-rose {
+.balloon-rose,
+.balloon-blue,
+.balloon-yellow {
   position: absolute;
   top: -5%;
   left: 4%;
@@ -411,24 +416,29 @@ div.wrapper {
 
 /* button */
 
-.btn1 {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  border: 3px solid #ffcfd0;
-  color: #ffcfd0;
-  background-color: #f05d76;
-  font-size: 20px;
+.button {
   font-family: 'Nanum Gothic', sans-serif;
+  margin: 0 auto;
+  display: block;
+  font-size: 20px;
+  overflow: hidden;
+  z-index: 1;
   font-weight: 800;
   padding: 10px 50px;
   border-radius: 50px;
-  overflow: hidden;
-  z-index: 1;
   letter-spacing: 2px;
+  border: 3px solid #ffcfd0;
+  text-decoration: none;
 }
 
-.btn1::before {
+
+.link-btn1 {
+  position: relative;
+  color: #ffcfd0;
+  background-color: #f05d76;
+}
+
+.link-btn1::before {
   content: "";
   width: 0;
   position: absolute;
@@ -440,14 +450,88 @@ div.wrapper {
   z-index: -1;
 }
 
-.btn1:hover::before {
+.link-btn1:hover::before {
   width: 100%;
 }
 
+/* section info blue  */
+
+.section-blue-info {
+  position: relative;
+  background-color: #d1ddd3;
+  background-image: url(img/churro_background.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
 
 
+div.wrapper70 {
+  max-width: 70%;
+}
 
+.balloon-blue {
+  height: 30%;
+}
 
+/* button blue */
+
+.div-btn2 {
+  position: relative;
+  background-color: #26a6b9;
+  min-height: 50vh;
+}
+
+.link-btn2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: #bfeaf9;
+  color: #bfeaf9;
+  background-color: #26a6b9;
+}
+
+.link-btn2::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #522d1d;
+  transition: .5s;
+  z-index: -1;
+}
+
+.link-btn2:hover::before {
+  width: 100%;
+}
+
+.ingredients {
+  position: relative;
+  background-color: #f9f8ef;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ingredients h2 {
+  padding: 50px 0 0 0;
+  font-size: 35px;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  line-height: 55px;
+
+}
+
+.ingred img {
+  width: 15%;
+  padding: 50px 30px;
+}
+
+.balloon-yellow {
+  height: 60%;
+}
 
 /* font-family: 'Archivo Black', sans-serif;
 font-family: 'Nanum Gothic', sans-serif; */
