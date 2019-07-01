@@ -6,3 +6,13 @@ document.addEventListener('scroll', function () {
     document.querySelector('nav').classList.remove('active')
   }
 })
+
+new Glider(document.querySelector('.glider'), {
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  duration: 3,
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  },
+});
