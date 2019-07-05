@@ -4,32 +4,119 @@
   box-sizing: border-box;
 }
 
+/* font-family: 'Anton', sans-serif;
+font-family: 'Nunito Sans', sans-serif; */
+
 body {
-  letter-spacing: 3px;
-  color: #522d1d;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 25px;
+  color: #522d1d;
+  letter-spacing: 3px;
   line-height: 25px;
-  font-weight: 600;
 }
-
-
 
 h1,
 h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 35px;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 35px;
   line-height: 55px;
+  letter-spacing: 5px;
 }
 
 a {
   text-decoration: none;
 }
 
+/* -------------------------------- buttons ------------------ */
+
+.button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  border: 3px solid #ffcfd0;
+  border-radius: 50px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
 
 
+.modify-btn1 {
+  color: #ffcfd0;
+  background-color: #f05d76;
+}
+
+.before::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #522d1d;
+  transition: .5s;
+  z-index: -1;
+}
+
+.before:hover::before {
+  width: 100%;
+}
+
+.blue-section {
+  position: relative;
+  background-color: #26a6b9;
+  min-height: 50vh;
+}
+
+.modify-btn2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: #bfeaf9;
+  color: #bfeaf9;
+  background-color: #26a6b9;
+}
+
+.modify-btn3 {
+  margin-top: 30px;
+  color: #50955f;
+  border-color: #50955f;
+}
+
+.modify-btn4 {
+  margin-top: 30px;
+  color: #522d1d;
+  border-color: #522d1d;
+  text-align: center;
+  transition: .5s;
+}
+
+.modify-btn4:hover {
+  color: white;
+}
+
+.modify-btn5 {
+  position: relative;
+  width: 35%;
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  border-color: #fff;
+  transition: .5s;
+}
+
+.modify-btn5:hover {
+  color: white;
+}
+
+/* ------------------------------------------------------------- */
 
 header {
   position: relative;
@@ -43,7 +130,7 @@ header {
   overflow: hidden;
 }
 
-/* logo in navigation */
+/*------------------------------------------ logo in navigation --------------*/
 
 nav a.logo img {
   position: absolute;
@@ -54,7 +141,7 @@ nav a.logo img {
   transition: 0.5s;
 }
 
-/* navigation */
+/*------------------------------------------  navigation -----------------*/
 
 nav {
   position: relative;
@@ -70,33 +157,32 @@ nav {
   transition: 0.5s;
 }
 
-ul.left-nav {
+ul.left-nav,
+ul.right-nav {
   display: flex;
   align-items: center;
   float: left;
   height: 100%;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 ul.right-nav {
   float: right;
-  height: 100%;
-  display: flex;
-  align-items: center;
   margin-right: 150px;
 }
 
 li {
-  list-style: none;
   display: inline-block;
-  text-align: center;
   padding: 0 15px;
+  list-style: none;
+  text-align: center;
+
 }
 
 li a {
   display: block;
-  color: #522d1d;
   padding: 0 15px;
+  color: #522d1d;
   border: 3px solid transparent;
   transition: .3s;
 }
@@ -109,21 +195,21 @@ nav span {
 /* ---------------------------------------------- drop down menu -------------*/
 
 .drop-down-menu .visible-link {
-  width: 11vw;
-  z-index: 2;
   position: relative;
+  width: 11vw;
+  z-index: 3;
 }
 
 .drop-down-menu ul {
-  width: 11vw;
   position: absolute;
+  width: 11vw;
   text-align: center;
   border: 3px solid transparent;
   transition: .7s;
   opacity: 0;
   visibility: hidden;
   padding-top: 10px;
-  z-index: 1;
+  z-index: 2;
   transform: translateY(-10px);
 }
 
@@ -145,14 +231,14 @@ nav span {
   background-color: #bfeaf9;
   border-radius: 20px;
   border: 3px solid #E6F5FB;
-  padding: 10px 15px;
+  padding: 5px 15px;
 }
 
 .visible-link:hover {
   background-color: #bfeaf9;
   border-radius: 20px;
   border: 3px solid #E6F5FB;
-  padding: 10px 15px;
+  padding: 5px 15px;
 }
 
 /*------------------------------------------ script js scroll fixed menu----- */
@@ -191,11 +277,11 @@ nav.active a.logo img {
 /* ----------------------------------------------- text h1 position --------- */
 
 .header {
-  width: 100%;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   z-index: 1;
 }
 
@@ -246,9 +332,9 @@ nav.active a.logo img {
 
 .cloud::before,
 .cloud::after {
-  background-color: #fff;
-  position: absolute;
   content: "";
+  position: absolute;
+  background-color: #fff;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
@@ -276,10 +362,10 @@ nav.active a.logo img {
 /* ------------------------------------- animation ballon on header --------- */
 
 .balloon-green {
-  height: 35%;
   position: absolute;
   top: 40%;
   right: 8%;
+  height: 35%;
   animation: balloon-green 3s linear infinite;
   z-index: 1;
 }
@@ -324,8 +410,8 @@ div.wrapper {
 
 .straw-banner,
 .crispy-banner {
-  width: 90%;
   display: block;
+  width: 90%;
   margin: 0 auto;
   padding: 70px 0 30px 0;
 }
@@ -348,10 +434,10 @@ div.wrapper {
 
 .straw-cream,
 .cinn-crispy {
-  height: 45%;
   position: absolute;
   top: 90%;
   left: 50%;
+  height: 45%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -407,41 +493,7 @@ div.wrapper {
 
 /* ------------------------------- button -----------------------------------*/
 
-.button {
-  margin: 0 auto;
-  display: block;
-  font-size: 20px;
-  overflow: hidden;
-  z-index: 1;
-  font-weight: 800;
-  padding: 10px 50px;
-  border-radius: 50px;
-  letter-spacing: 2px;
-  border: 3px solid #ffcfd0;
-}
 
-
-.link-btn1 {
-  position: relative;
-  color: #ffcfd0;
-  background-color: #f05d76;
-}
-
-.link-btn1::before {
-  content: "";
-  width: 0;
-  position: absolute;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #522d1d;
-  transition: .5s;
-  z-index: -1;
-}
-
-.link-btn1:hover::before {
-  width: 100%;
-}
 
 /* ------------------------------- section info blue ----------------------- */
 
@@ -463,39 +515,8 @@ div.wrapper70 {
   height: 30%;
 }
 
-/* button blue */
+/* ------------------------------------- button blue ------------------------*/
 
-.div-btn2 {
-  position: relative;
-  background-color: #26a6b9;
-  min-height: 50vh;
-}
-
-.link-btn2 {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-color: #bfeaf9;
-  color: #bfeaf9;
-  background-color: #26a6b9;
-}
-
-.link-btn2::before {
-  content: "";
-  width: 0;
-  position: absolute;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #522d1d;
-  transition: .5s;
-  z-index: -1;
-}
-
-.link-btn2:hover::before {
-  width: 100%;
-}
 
 .ingredients {
   position: relative;
@@ -519,7 +540,7 @@ div.wrapper70 {
   left: 2%;
 }
 
-/* section smashup */
+/* --------------------------------------- section smashup -------------------*/
 
 .smashup {
   background-image: url(../img/fruites_bg.jpg);
@@ -531,7 +552,7 @@ div.wrapper70 {
 }
 
 .smashup>div {
-  padding: 50px 20px 0 0;
+  padding: 50px 20px 0 20px;
   max-width: 50%;
   float: right;
 }
@@ -542,36 +563,10 @@ div.wrapper70 {
 }
 
 .smashup p {
-  font-size: 18px;
+  font-size: 15px;
 }
 
-.link-btn3 {
-  position: relative;
-  margin-top: 30px;
-  color: #50955f;
-  border-color: #50955f;
-  text-align: center;
-}
-
-.link-btn3::before {
-  content: "";
-  width: 0;
-  position: absolute;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #522d1d;
-  transition: .5s;
-  z-index: -1;
-}
-
-.link-btn3:hover::before {
-  width: 100%;
-}
-
-/* section learmore smash */
-
-
+/*---------------------------------------- section learmore smash -----------*/
 
 .learn-more {
   position: relative;
@@ -583,7 +578,7 @@ div.wrapper70 {
 
 .learn-more>div {
   max-width: 50%;
-  padding: 100px 0 0 20px;
+  padding: 100px 20px 0 20px;
 }
 
 .learn-more h2 {
@@ -591,38 +586,11 @@ div.wrapper70 {
 }
 
 .learn-more p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
 }
 
-.link-btn4 {
-  position: relative;
-  margin-top: 30px;
-  color: #522d1d;
-  border-color: #522d1d;
-  text-align: center;
-  transition: .5s;
-}
-
-.link-btn4::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #522d1d;
-  transition: .5s;
-  z-index: -1;
-}
-
-.link-btn4:hover::before {
-  width: 100%;
-}
-
-.link-btn4:hover {
-  color: white;
-}
+/* -------------------------------------- section products ---------------- */
 
 .products {
   padding: 100px 50px;
@@ -641,56 +609,24 @@ div.wrapper70 {
   padding-left: 50px;
 }
 
-/* section love */
-
+/* --------------------------------------  section love -------------------- */
 
 section.love {
-  background-image: url(../img/lunchbox_love.jpg);
   min-height: 90vh;
+  background-image: url(../img/lunchbox_love.jpg);
   background-size: 140%;
   background-position: 50% 50%;
-  color: #d6525f;
   background-repeat: no-repeat;
   text-transform: uppercase;
-  padding-top: 30%;
+  color: #d6525f;
+  padding-top: 26%;
 }
 
-.link-btn5 {
-  position: relative;
-  margin-top: 20px;
-  width: 35%;
-  color: #fff;
-  border-color: #fff;
-  text-align: center;
-  transition: .5s;
-}
-
-.link-btn5::before {
-  content: "";
-  width: 0;
-  position: absolute;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #522d1d;
-  transition: .5s;
-  z-index: -1;
-}
-
-.link-btn5:hover::before {
-  width: 100%;
-}
-
-.link-btn5:hover {
-  color: white;
-}
-
-
-/* section footer i form */
+/*-------------------------------------- section footer i form --------------*/
 
 .footer-img {
-  background-image: url(../img/world_footer.png);
   min-height: 50vh;
+  background-image: url(../img/world_footer.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -709,8 +645,8 @@ section.love {
 }
 
 form {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 30%;
   padding-left: 20px;
 }
@@ -738,7 +674,6 @@ form button {
   transform: translate(-5%, -50%);
 }
 
-
 form button img {
   transition: .3s;
 }
@@ -747,10 +682,10 @@ form button img:hover {
   transform: scale(1.2);
 }
 
+/* --------------------------------- footer ----------------*/
 
 footer {
   background-image: url(../img/bg_footer.jpg);
-  font-family: 'Archivo Black', sans-serif;
   text-transform: uppercase;
   color: #fff;
   padding: 30px 0;
@@ -765,30 +700,26 @@ footer {
 
 footer div h3 {
   padding-bottom: 25px;
+  font-weight: bold;
 }
 
 footer div a {
   font-size: 12px;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #fff;
   display: block;
 }
 
-
-.follow-footer {
-  text-align: center;
-}
-
-
 .follow-footer a {
   display: inline-block;
-  padding: 0 10px;
+  margin: 0 10px;
 }
 
 .follow-footer i {
   text-align: center;
   line-height: 44px;
   width: 48px;
+  height: 48px;
   color: #C271A2;
   font-size: 20px;
   border: 2px solid #C271A2;
@@ -802,7 +733,6 @@ footer div a {
   transform: scale(1.2);
 }
 
-
 .copyright {
   width: 100%;
   color: rgba(255, 255, 255, 0.63);
@@ -812,6 +742,7 @@ footer div a {
   letter-spacing: 3px;
 }
 
+/*------------------------------------------ pop up------------- */
 
 .popup {
   position: fixed;
@@ -823,7 +754,7 @@ footer div a {
   background-color: #522d1d;
   text-transform: uppercase;
   color: white;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   text-align: center;
   line-height: 7vh;
   z-index: 2;
@@ -836,14 +767,15 @@ footer div a {
   transform: translateY(-50%);
   font-size: 20px;
   cursor: pointer;
-  font-family: arial;
 }
 
+/* ------------------------------------------ modal window-------- */
+
 .modal-window {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
