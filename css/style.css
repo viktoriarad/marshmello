@@ -29,6 +29,8 @@ a {
   text-decoration: none;
 }
 
+
+
 /* -------------------------------- buttons ------------------ */
 
 .button {
@@ -132,7 +134,7 @@ header {
 
 /*------------------------------------------ logo in navigation --------------*/
 
-nav a.logo img {
+.navigation a.logo img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,7 +145,18 @@ nav a.logo img {
 
 /*------------------------------------------  navigation -----------------*/
 
-nav {
+.fa-bars {
+  display: none;
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.navigation {
   position: relative;
   top: 5%;
   left: 2%;
@@ -171,7 +184,7 @@ ul.right-nav {
   margin-right: 150px;
 }
 
-li {
+.navigation-li {
   display: inline-block;
   padding: 0 15px;
   list-style: none;
@@ -179,7 +192,7 @@ li {
 
 }
 
-li a {
+.navigation-li a {
   display: block;
   padding: 0 15px;
   color: #522d1d;
@@ -187,7 +200,7 @@ li a {
   transition: .3s;
 }
 
-nav span {
+.navigation span {
   display: block;
   font-size: 8px;
 }
@@ -213,7 +226,7 @@ nav span {
   transform: translateY(-10px);
 }
 
-.drop-down-menu ul li {
+.drop-down-menu ul .navigation-li {
   display: block;
   padding: 0;
   margin: 0;
@@ -243,7 +256,7 @@ nav span {
 
 /*------------------------------------------ script js scroll fixed menu----- */
 
-nav.active {
+.navigation.active {
   position: fixed;
   top: 0;
   left: 0;
@@ -253,7 +266,7 @@ nav.active {
   box-shadow: 0px 10px 10px -15px #111;
 }
 
-nav.active a.logo img {
+.navigation.active a.logo img {
   height: 10vh;
   transition: 0.3s;
 }
@@ -544,7 +557,7 @@ div.wrapper70 {
 
 .smashup {
   background-image: url(../img/fruites_bg.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
@@ -625,9 +638,9 @@ section.love {
 /*-------------------------------------- section footer i form --------------*/
 
 .footer-img {
-  min-height: 50vh;
+  min-height: 35vh;
   background-image: url(../img/world_footer.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   border-bottom: 3px solid #50955f;
@@ -805,4 +818,337 @@ footer div a {
   position: absolute;
   color: white;
   cursor: pointer;
+}
+
+.bg-black {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.burgerMenu {
+  display: block;
+  position: fixed;
+  left: -100%;
+  background-color: #26a6b9;
+  min-height: 100vh;
+  z-index: 5;
+  text-align: center;
+  box-shadow: 0px 10px 10px 1px #111;
+
+}
+
+
+
+.burgerMenu-balloon {
+  width: 50%;
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+
+.burgerMenu-ul {
+  margin-top: 120px;
+}
+
+.burgerMenu-li {
+  padding: 7px 15px;
+}
+
+.burgerMenu a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.divider {
+  width: 50px;
+  height: 8px;
+  background-color: #fff;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+
+.fa-times {
+  color: white;
+  margin-top: 50px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+
+  .navigation-li {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .navigation-li {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .burgerMenu.burgerMenu-active {
+    left: 0;
+    transition: .5s;
+  }
+
+  .bg-black.bg-black-active {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+
+  header {
+    background-position: 50% 100%;
+  }
+
+  .balloon-green {
+    height: 20%;
+    z-index: 0;
+  }
+
+  .balloon.blue {
+    height: 25%;
+  }
+
+  .blue-section {
+    min-height: 20vh;
+  }
+
+  .smashup {
+    min-height: 50vh;
+
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .learn-more {
+    background-size: cover;
+    min-height: 40vh;
+  }
+
+  .learn-more>div {
+    padding: 30px 20px 0 10px;
+  }
+
+  .learn-more h2 {
+    padding-bottom: 0;
+  }
+
+
+  .products {
+    padding: 50px 50px;
+  }
+
+  section.love {
+    min-height: 40vh;
+    padding-top: 320px
+  }
+
+  .footer-img {
+    min-height: 20vh;
+  }
+
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+  .balloon.rose {
+    height: 30%;
+  }
+
+  .label {
+    padding: 30px 0 300px 0;
+  }
+
+  .label img {
+    padding: 0;
+  }
+
+  .kinds-of-mallow {
+    padding: 100px 0 50px 0;
+  }
+
+  .kinds-of-mallow div {
+    padding-bottom: 20px;
+  }
+
+  .balloon.yellow {
+    height: 40%;
+  }
+
+  .ingred img {
+    width: 15%;
+    padding: 50px 10px;
+  }
+
+  .smashup {
+    background-size: 150%;
+    background-position-x: 20%;
+  }
+
+  .learn-more {
+    min-height: 60vh;
+    background-size: 150%;
+    background-position-x: 20%;
+  }
+
+  section.love {
+    background-size: 160%;
+    padding-top: 250px;
+  }
+
+  .email-signup span {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    padding: 30px 30px;
+  }
+
+  footer .links div {
+    margin: 0 10px;
+  }
+
+  .follow-footer i {
+    line-height: 28px;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .follow-footer i:hover {
+    color: #C271A2;
+    background-color: transparent;
+    transform: scale(1);
+  }
+
+}
+
+@media (max-width: 414px) and (orientation: portrait) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .balloon.rose {
+    height: 15%;
+  }
+
+  .straw-banner,
+  .crispy-banner {
+    width: 100%;
+    padding: 40px 0 30px 0;
+  }
+
+  .navigation a.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10vh;
+    transition: 0.5s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .label {
+    padding: 30px 0 300px 0;
+  }
+
+  .label img {
+    padding: 0;
+  }
+
+  .kinds-of-mallow {
+    padding: 100px 0 50px 0;
+  }
+
+  .kinds-of-mallow div {
+    padding-bottom: 20px;
+  }
+
+  .balloon.yellow {
+    height: 40%;
+  }
+
+  .ingred img {
+    width: 15%;
+    padding: 50px 10px;
+  }
+
+  .smashup {
+    background-size: 150%;
+    background-position-x: 20%;
+
+  }
+
+  .learn-more {
+    min-height: 60vh;
+    background-size: 150%;
+    background-position-x: 20%;
+  }
+
+  section.love {
+    background-size: 160%;
+    padding-top: 250px;
+  }
+
+  .email-signup span {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    padding: 30px 30px;
+  }
+
+  footer .links div {
+    margin: 0 10px;
+  }
+
+
+  .follow-footer i {
+    line-height: 28px;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .follow-footer i:hover {
+    color: #C271A2;
+    background-color: transparent;
+    transform: scale(1);
+  }
+
 }
