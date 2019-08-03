@@ -1284,6 +1284,10 @@ footer div a {
     height: 12%;
   }
 
+  .kinds-of-mallow div img {
+    width: 50%;
+  }
+
   .blue-section {
     min-height: 30vh;
   }
