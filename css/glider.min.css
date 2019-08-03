@@ -101,7 +101,7 @@
 .glider-prev.disabled {
   opacity: .25;
   color: #666;
-  cursor: default
+  cursor: default;
 }
 
 .glider-hide {

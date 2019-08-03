@@ -262,7 +262,7 @@ ul.right-nav {
   left: 0;
   width: 100%;
   height: 15vh;
-  z-index: 2;
+  z-index: 998;
   box-shadow: 0px 10px 10px -15px #111;
 }
 
@@ -591,7 +591,7 @@ div.wrapper70 {
 
 .learn-more>div {
   max-width: 50%;
-  padding: 100px 20px 0 20px;
+  padding: 50px 20px 0 20px;
 }
 
 .learn-more h2 {
@@ -599,7 +599,7 @@ div.wrapper70 {
 }
 
 .learn-more p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 25px;
 }
 
@@ -632,7 +632,7 @@ section.love {
   background-repeat: no-repeat;
   text-transform: uppercase;
   color: #d6525f;
-  padding-top: 26%;
+  padding-top: 350px;
 }
 
 /*-------------------------------------- section footer i form --------------*/
@@ -792,7 +792,7 @@ footer div a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 4;
+  z-index: 999;
 }
 
 .modal-window-img {
@@ -838,10 +838,7 @@ footer div a {
   z-index: 5;
   text-align: center;
   box-shadow: 0px 10px 10px 1px #111;
-
 }
-
-
 
 .burgerMenu-balloon {
   width: 50%;
@@ -882,12 +879,16 @@ footer div a {
   cursor: pointer;
 }
 
+/* ------------------------------------------ 1300px-------- */
+
 @media (max-width: 1300px) {
 
   .navigation-li {
     padding: 0 10px;
   }
 }
+
+/* ------------------------------------------ 1024px-------- */
 
 @media (max-width: 1024px) {
 
@@ -908,6 +909,57 @@ footer div a {
     display: block;
   }
 }
+
+/* -------------------max-width: 1024px &  orientation: landscape-------- */
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  header {
+    min-height: 100vh;
+    background-position: 100% 100%;
+  }
+
+  .kinds-of-mallow {
+    padding: 100px 0 50px 0;
+  }
+
+  .kinds-of-mallow div {
+    padding-bottom: 40px;
+  }
+
+  .kinds-of-mallow div img {
+    width: 20%;
+  }
+
+  .blue-section {
+    min-height: 30vh;
+  }
+
+  .smashup {
+    min-height: 80vh;
+  }
+
+  .learn-more {
+    min-height: 80vh;
+  }
+
+  .learn-more>div {
+    max-width: 50%;
+    padding: 50px 20px 0 20px;
+  }
+
+  section.love {
+    min-height: 60vh;
+    padding-top: 270px;
+  }
+
+  .follow-footer i:hover {
+    color: #C271A2;
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+/* -------------------max-width: 1024px &  orientation: portrait-------- */
 
 @media (max-width: 1024px) and (orientation: portrait) {
 
@@ -930,7 +982,6 @@ footer div a {
 
   .smashup {
     min-height: 50vh;
-
   }
 
   h1 {
@@ -955,7 +1006,6 @@ footer div a {
     padding-bottom: 0;
   }
 
-
   .products {
     padding: 50px 50px;
   }
@@ -970,6 +1020,8 @@ footer div a {
   }
 
 }
+
+/* -------------------max-width: 768px &  orientation: portrait-------- */
 
 @media (max-width: 768px) and (orientation: portrait) {
 
@@ -1046,41 +1098,48 @@ footer div a {
 
 }
 
-@media (max-width: 414px) and (orientation: portrait) {
-  h1 {
-    font-size: 30px;
+/* -------------------max-width: 736px &  orientation: landscape-------- */
+
+@media (max-width:812px) and (orientation: landscape) {
+
+  h1,
+  h2 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  body {
+    line-height: 20px;
+  }
+
+  header {
+    min-height: 100vh;
+    background-position: 100% 120%;
+  }
+
+  .burgerMenu a {
+    font-size: 12px;
+  }
+
+  .burgerMenu-ul {
+    margin-top: 70px;
+  }
+
+  .burgerMenu-li {
+    padding: 5px 15px;
+  }
+
+  .divider {
+    margin: 10px auto;
+  }
+
+  .fa-times {
+    margin-top: 0;
   }
 
   .balloon.rose {
-    height: 15%;
+    height: 20%;
   }
-
-  .straw-banner,
-  .crispy-banner {
-    width: 100%;
-    padding: 40px 0 30px 0;
-  }
-
-  .navigation a.logo img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 10vh;
-    transition: 0.5s;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
 
   .label {
     padding: 30px 0 300px 0;
@@ -1094,12 +1153,16 @@ footer div a {
     padding: 100px 0 50px 0;
   }
 
-  .kinds-of-mallow div {
-    padding-bottom: 20px;
+  .balloon.blue {
+    height: 20%;
+  }
+
+  .blue-section {
+    min-height: 60vh;
   }
 
   .balloon.yellow {
-    height: 40%;
+    height: 30%;
   }
 
   .ingred img {
@@ -1108,25 +1171,49 @@ footer div a {
   }
 
   .smashup {
-    background-size: 150%;
-    background-position-x: 20%;
+    min-height: 90vh;
+    background-size: 200%;
+    background-position-x: 45%;
+  }
 
+  .smashup>div {
+    padding: 20px 20px 0 20px;
+    max-width: 80%;
+  }
+
+  .smashup h2 {
+    padding-bottom: 10px;
+  }
+
+  .button {
+    font-size: 16px;
   }
 
   .learn-more {
-    min-height: 60vh;
-    background-size: 150%;
-    background-position-x: 20%;
+    min-height: 90vh;
+    background-size: 200%;
+    background-position-x: 35%;
+  }
+
+  .learn-more>div {
+    max-width: 70%;
+    padding: 20px 20px 0 20px;
   }
 
   section.love {
-    background-size: 160%;
-    padding-top: 250px;
+    min-height: 80vh;
+    background-position: 50% 20%;
+    padding-top: 230px;
   }
 
-  .email-signup span {
-    display: block;
-    padding-bottom: 20px;
+  .modify-btn5 {
+    width: 60%;
+    margin-top: 10px;
+  }
+
+  form {
+    margin-top: 20px;
+    width: 60%;
   }
 
   footer {
@@ -1137,7 +1224,6 @@ footer div a {
     margin: 0 10px;
   }
 
-
   .follow-footer i {
     line-height: 28px;
     width: 32px;
@@ -1145,10 +1231,169 @@ footer div a {
     font-size: 12px;
   }
 
-  .follow-footer i:hover {
-    color: #C271A2;
-    background-color: transparent;
-    transform: scale(1);
+  .follow-footer a {
+    margin: 0 5px;
+  }
+}
+
+/* -------------------max-width: 667px &  orientation: landscape-------- */
+
+@media (max-width: 667px) and (orientation: landscape) {
+  section.love {
+    min-height: 80vh;
+    background-size: 200%;
+    background-position: 50% 50%;
+    padding-top: 180px;
+  }
+}
+
+/* -------------------max-width: 414px &  orientation: portrait-------- */
+
+@media (max-width: 414px) and (orientation: portrait) {
+
+  header {
+    background-position: 50% 100%;
+    background-size: 200%;
   }
 
+  h1 {
+    font-size: 28px;
+  }
+
+  .balloon.rose {
+    height: 15%;
+  }
+
+  .straw-banner,
+  .crispy-banner {
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+
+  .navigation a.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10vh;
+    transition: 0.5s;
+  }
+
+  .balloon.blue {
+    height: 12%;
+  }
+
+  .blue-section {
+    min-height: 30vh;
+  }
+
+  .smashup {
+    min-height: 80vh;
+    background-size: 300%;
+    background-position-x: 45%;
+  }
+
+  .smashup>div {
+    padding: 20px 20px 0 20px;
+    max-width: 80%;
+  }
+
+  .smashup h2 {
+    padding-bottom: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .learn-more {
+    min-height: 80vh;
+    background-size: 300%;
+    background-position-x: 45%;
+  }
+
+  .learn-more>div {
+    max-width: 80%;
+    padding: 20px 20px 0 20px;
+  }
+
+  .products {
+    padding: 80px 50px;
+  }
+
+  .products h2 {
+    padding-bottom: 30px;
+  }
+
+  section.love {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  .modify-btn5 {
+    width: 60%;
+    margin-top: 60px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .links {
+    display: block;
+  }
+
+  .links>div {
+    padding-bottom: 30px;
+  }
+
+  footer div h3 {
+    padding-bottom: 5px;
+  }
+
+  .copyright {
+    padding-top: 20px;
+  }
+
+}
+
+@media (max-width: 375px) and (orientation: portrait) {
+
+  .balloon.yellow {
+    height: 30%;
+    left: 1%;
+  }
+
+  .smashup {
+    background-position-x: 49%;
+  }
+
+  .smashup>div {
+    max-width: 90%;
+  }
+
+  .learn-more>div {
+    max-width: 90%;
+  }
+
+  .modify-btn5 {
+    width: 80%;
+    margin-top: 50px;
+  }
+}
+
+@media (width: 812px) and (height:375px) {}
+
+
+@media (width: 375px) and (height:812px) {
+  section.love {
+    min-height: 60vh;
+    background-position: 50% 0;
+  }
+
+  .modify-btn5 {
+    width: 80%;
+    margin-top: 20px;
+  }
 }

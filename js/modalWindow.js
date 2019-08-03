@@ -2,7 +2,7 @@ const modalWindow = document.querySelector('.modal-window');
 const closeBtn = document.querySelector('.modal-window-img span');
 
 const showModal = () => {
-  if (window.pageYOffset > 800) {
+  if (window.pageYOffset > 800 && window.innerWidth > 1024) {
     modalWindow.classList.add('modal-active');
     document.removeEventListener('scroll', showModal);
   }
