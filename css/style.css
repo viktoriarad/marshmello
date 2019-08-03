@@ -502,6 +502,7 @@ div.wrapper {
 
 .kinds-of-mallow div img {
   width: 20%;
+  height: auto;
 }
 
 /* ------------------------------- button -----------------------------------*/
