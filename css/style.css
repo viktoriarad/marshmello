@@ -491,7 +491,7 @@ div.wrapper {
   padding: 150px 0 80px 0;
 }
 
-.kinds-of-mallow div {
+.kinds-of-mallow>div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -500,9 +500,12 @@ div.wrapper {
   padding-bottom: 60px;
 }
 
-.kinds-of-mallow div img {
+.kinds-of-mallow-img {
   width: 20%;
-  height: auto;
+}
+
+.kinds-of-mallow-img img {
+  width: 100%;
 }
 
 /* ------------------------------- button -----------------------------------*/
@@ -923,12 +926,8 @@ footer div a {
     padding: 100px 0 50px 0;
   }
 
-  .kinds-of-mallow div {
+  .kinds-of-mallow>div {
     padding-bottom: 40px;
-  }
-
-  .kinds-of-mallow div img {
-    width: 20%;
   }
 
   .blue-section {
@@ -1042,7 +1041,7 @@ footer div a {
     padding: 100px 0 50px 0;
   }
 
-  .kinds-of-mallow div {
+  .kinds-of-mallow>div {
     padding-bottom: 20px;
   }
 
@@ -1282,12 +1281,6 @@ footer div a {
 
   .balloon.blue {
     height: 12%;
-  }
-
-  .kinds-of-mallow div img {
-    width: 20%;
-    height: auto;
-    display: inline-block;
   }
 
   .blue-section {
